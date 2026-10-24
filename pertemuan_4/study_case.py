@@ -1,4 +1,8 @@
-print("=== SISTEM ONGKOS PAKET ===")
+# Nama: Fahriza Kurniawan
+# NPM: 267006111119
+# Kelas: E
+
+print("=== SISTEM ONGKOS KIRIM PAKET ===")
 
 jnsLayanan = input("Masukkan jenis layanan(reguler/kilat): ")
 brtPaket = int(input("Berat paket (kg): "))
@@ -22,15 +26,13 @@ if brtPaket > 0:
 
     if brtPaket > 5:
         biayaPenanganan = 5000
-    else:
-        biayaPenanganan = 0
-else:
-    print("Error")
 
-if asuransi == 'y':
-    biayaAsuransi = 3000
+    if asuransi == 'y':
+        biayaAsuransi = 3000
+    
 else:
-    biayaAsuransi = 0
+    print('Program error')
+    exit()
 
 print("=== RINCIAN BIAYA PENGIRIMAN ===")
 print(f'Layanan: {jnsLayanan}')
@@ -38,6 +40,5 @@ print(f'Berat Paket: {brtPaket} kg')
 print(f'Ongkos Kirim: {ongKir}')
 print(f'Biaya Penanganan: {biayaPenanganan}')
 print(f'Biaya asuransi: {biayaAsuransi}')
-
 print("-------------------------- +")
 print("Total", biayaPenanganan + ongKir + biayaAsuransi)

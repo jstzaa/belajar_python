@@ -1,29 +1,35 @@
+# Nama: Fahriza Kurniawan
+# NPM: 267006111119
+# Kelas: E
+
 print("=== PENGECEKAN TIKET ROLLER COASTER ===")
 
 umur = int(input("Masukkan umur: "))
-tinggi = float(input("Masukkan tinggi: "))
 harga = 50000
+diskon = 0
 
 # Pengecekan pertama
 if umur >= 12:
+    tinggi = float(input("Masukkan tinggi: "))
     if tinggi >= 150:
         print("\nSyarat terpenuhi! Anda boleh lanjut")
-        member = input("Apakah sudah mempunyai member? (y/n)")
+        member = input("Apakah sudah mempunyai member? (y/n): ")
 
         if member == 'y':
-            harga -= 10000
-            print("Anda dapat diskon!")
+            diskon = 10000
+            harga -= diskon
+            print("Anda dapat diskon: Rp", diskon)
 
-        print("Total tiket: Rp.", harga)
-        uang = float(input("Masukkan uang Anda: Rp."))
+        print("Total tiket: Rp", harga)
+        uang = int(input("Masukkan uang Anda: "))
 
         if uang == harga:
             print("Uang Anda pas")
         elif uang > harga:
-            print("Uang Anda lebih, kembalian Rp.", uang - harga)
+            print("Uang Anda lebih, kembalian: Rp", uang - harga)
         else:
             print("Uang Anda kurang")
     else:
         print("Maaf, tinggi Anda belum mencukupi, minimal (150cm)")
 else:
-    print("Maaf, wahana ini khusus untuk 15 tahun ke atas")
+    print("Maaf, wahana ini khusus untuk 12 tahun ke atas")
