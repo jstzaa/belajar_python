@@ -1,7 +1,9 @@
+# Nama: Fahriza Kurniawan
+# NPM: 267006111119
+# Kelas: E
+
 print("=== Simulasi Tabungan Liburan ===")
 lama_minggu = int(input("Berapa minggu Anda ingin menabung?: "))
-lama_hari = int(input("Berapa hari dalam seminggu Anda ingin menabung?(1-7): "))
-libur_hari = int(input("Hari ke berapa Anda ingin libur? (1-7): "))
 total_uang = 0
 print("\n--- Mulai Menabung ---")
 
@@ -12,9 +14,9 @@ for minggu in range(1, lama_minggu + 1):
         
     print("\n[ Memasuki Minggu ke-", minggu, "]")
     
-    for hari in range(1, lama_hari + 1):
-        if hari == libur_hari:
-            print(f"  - Hari ke- {hari} (Libur, jadwal menabung dilewati)")
+    for hari in range(1, 4):
+        if hari == 2:
+            print("  - Hari ke- 2 (Libur, jadwal menabung dilewati)")
             continue
             
         print("  - Hari ke-", hari)
